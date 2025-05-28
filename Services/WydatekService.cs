@@ -23,17 +23,25 @@ namespace RejestrWydatkow.Services
             return await _db.Wydatek.ToListAsync();
         }
 
-        public async Task ModyfikujWydatek(int Id, Wydatek wydatek)
+        public async Task ModyfikujWydatek(int id, Wydatek wydatek)
         {
-            var _wydatek = await _db.Wydatek.Where(w =>  w.Id == Id).ToListAsync();
+            var _wydatek = await _db.Wydatek.FirstAsync(w => w.Id == id);
             if (_wydatek == null) {
                 return;
             }
 
-            _wydatek[0].Opis = wydatek.Opis;
-            _wydatek[0].Kwota = wydatek.Kwota;
-            _wydatek[0].Kategoria = wydatek.Kategoria;
-            _wydatek[0].Data = wydatek.Data;
+            _wydatek.Opis = wydatek.Opis;
+            _wydatek.Kwota = wydatek.Kwota;
+            _wydatek.Kategoria = wydatek.Kategoria;
+            _wydatek.Data = wydatek.Data;
+
+            await _db.SaveChangesAsync();
+        }
+
+        public async Task UsunWydatek(int id)
+        {
+            var wydatek = await _db.Wydatek.FirstAsync(w => w.Id == id);
+            _db.Wydatek.Remove(wydatek);
 
             await _db.SaveChangesAsync();
         }

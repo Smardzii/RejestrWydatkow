@@ -7,7 +7,9 @@ namespace RejestrWydatkow.Services.Interfaces
         Task<List<Wydatek>> ListaWydatkow();
 
         Task DodajWydatek(Wydatek wydatek);
-        Task ModyfikujWydatek(int Id, Wydatek wydatek);
+        Task ModyfikujWydatek(int id, Wydatek wydatek);
+
+        Task UsunWydatek(int id);
 
     }
 }

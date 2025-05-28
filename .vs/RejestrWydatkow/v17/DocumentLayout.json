@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Projekty\\git\\RejestrWydatkow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|d:\\projekty\\git\\rejestrwydatkow\\models\\wydatek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|solutionrelative:models\\wydatek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|d:\\projekty\\git\\rejestrwydatkow\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|d:\\projekty\\git\\rejestrwydatkow\\services\\wydatekservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|solutionrelative:services\\interfaces\\iwydatekservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|d:\\projekty\\git\\rejestrwydatkow\\models\\wydatkidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|solutionrelative:models\\wydatkidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|d:\\projekty\\git\\rejestrwydatkow\\models\\wydatek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|solutionrelative:models\\wydatek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}|RejestrWydatkow.csproj|d:\\projekty\\git\\rejestrwydatkow\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,11 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IWydatekService.cs",
+              "DocumentMoniker": "D:\\Projekty\\git\\RejestrWydatkow\\Services\\Interfaces\\IWydatekService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IWydatekService.cs",
+              "ToolTip": "D:\\Projekty\\git\\RejestrWydatkow\\Services\\Interfaces\\IWydatekService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IWydatekService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T18:14:37.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Projekty\\git\\RejestrWydatkow\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Projekty\\git\\RejestrWydatkow\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAACMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T17:50:19.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Wydatek.cs",
               "DocumentMoniker": "D:\\Projekty\\git\\RejestrWydatkow\\Models\\Wydatek.cs",
               "RelativeDocumentMoniker": "Models\\Wydatek.cs",
@@ -47,41 +73,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IWydatekService.cs",
-              "DocumentMoniker": "D:\\Projekty\\git\\RejestrWydatkow\\Services\\Interfaces\\IWydatekService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IWydatekService.cs",
-              "ToolTip": "D:\\Projekty\\git\\RejestrWydatkow\\Services\\Interfaces\\IWydatekService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IWydatekService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T17:32:39.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "WydatekService.cs",
               "DocumentMoniker": "D:\\Projekty\\git\\RejestrWydatkow\\Services\\WydatekService.cs",
               "RelativeDocumentMoniker": "Services\\WydatekService.cs",
               "ToolTip": "D:\\Projekty\\git\\RejestrWydatkow\\Services\\WydatekService.cs",
               "RelativeToolTip": "Services\\WydatekService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAjwC0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T17:32:03.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WydatkiDbContext.cs",
-              "DocumentMoniker": "D:\\Projekty\\git\\RejestrWydatkow\\Models\\WydatkiDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\WydatkiDbContext.cs",
-              "ToolTip": "D:\\Projekty\\git\\RejestrWydatkow\\Models\\WydatkiDbContext.cs",
-              "RelativeToolTip": "Models\\WydatkiDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T17:18:24.791Z",
               "EditorCaption": ""
             },
             {
