@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RejestrWydatkow", "RejestrWydatkow.csproj", "{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D282A9DD-DA94-4CB0-AFA7-80B2F5E5BB41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0A52B0D-639F-418A-8998-FDA5AC79DDC9}
+	EndGlobalSection
+EndGlobal
