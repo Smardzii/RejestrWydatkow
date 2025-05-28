@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using RejestrWydatkow.Models;
+
 namespace RejestrWydatkow
 {
     public class Program
@@ -8,6 +11,9 @@ namespace RejestrWydatkow
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<WydatkiDbContext>(options => 
+                options.UseSqlServer(builder.Configuration.GetConnectionString("WydatkiDb")
+            ));
 
             var app = builder.Build();
 
