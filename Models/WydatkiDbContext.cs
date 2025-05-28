@@ -6,6 +6,6 @@ namespace RejestrWydatkow.Models
     {
         public WydatkiDbContext(DbContextOptions<WydatkiDbContext> options) : base(options) { }
 
-        DbSet<Wydatek> Wydatek { get; set; }
+        public DbSet<Wydatek> Wydatek { get; set; }
     }
 }

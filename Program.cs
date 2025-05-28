@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RejestrWydatkow.Models;
+using RejestrWydatkow.Services;
+using RejestrWydatkow.Services.Interfaces;
 
 namespace RejestrWydatkow
 {
@@ -14,6 +16,8 @@ namespace RejestrWydatkow
             builder.Services.AddDbContext<WydatkiDbContext>(options => 
                 options.UseSqlServer(builder.Configuration.GetConnectionString("WydatkiDb")
             ));
+
+            builder.Services.AddScoped<IWydatekService, WydatekService>();
 
             var app = builder.Build();
 
