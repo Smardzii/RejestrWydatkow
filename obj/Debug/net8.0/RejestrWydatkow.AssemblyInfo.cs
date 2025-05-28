@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RejestrWydatkow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a44ae7d3a798751dd14a038edd1621339e004de3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e825cbb1c6694f3bd5ade1b722fc14f8752675a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RejestrWydatkow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RejestrWydatkow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
