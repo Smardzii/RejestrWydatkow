@@ -33,13 +33,14 @@ namespace RejestrWydatkow.Controllers
             return View(wydatki);
         }
 
+        [HttpPost]
         public async Task<IActionResult> Add([FromBody] Wydatek wydatek) 
         {
             await _wydatekService.DodajWydatek(wydatek);
             return RedirectToAction("Index");
         }
 
-        [HttpPost()]
+        [HttpPost]
         public async Task<IActionResult> Edit(int id, [FromBody] Wydatek wydatek) 
         {
             await _wydatekService.ModyfikujWydatek(id, wydatek);
