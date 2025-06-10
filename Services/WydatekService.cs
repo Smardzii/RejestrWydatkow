@@ -23,9 +23,9 @@ namespace RejestrWydatkow.Services
             return await _db.Wydatek.ToListAsync();
         }
 
-        public async Task ModyfikujWydatek(int id, Wydatek wydatek)
+        public async Task ModyfikujWydatek(Wydatek wydatek)
         {
-            var _wydatek = await _db.Wydatek.FirstAsync(w => w.Id == id);
+            var _wydatek = await _db.Wydatek.FirstAsync(w => w.Id == wydatek.Id);
             if (_wydatek == null) {
                 return;
             }
@@ -44,6 +44,11 @@ namespace RejestrWydatkow.Services
             _db.Wydatek.Remove(wydatek);
 
             await _db.SaveChangesAsync();
+        }
+
+        public async Task<Wydatek> ZnajdzWydatek(int id)
+        {
+            return await _db.Wydatek.FirstAsync(w => w.Id == id);
         }
     }
 }

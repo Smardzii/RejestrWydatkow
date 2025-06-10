@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using RejestrWydatkow.Models;
 using RejestrWydatkow.Services.Interfaces;
 using System.Diagnostics;
@@ -43,6 +44,7 @@ namespace RejestrWydatkow.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add(Wydatek wydatek)
@@ -52,30 +54,27 @@ namespace RejestrWydatkow.Controllers
                 await _wydatekService.DodajWydatek(wydatek);
                 return RedirectToAction(nameof(Index));
             }
-            return View(wydatek); // lub inna strona/formularz dodawania z b��dami
+            return View(wydatek);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Wydatek wydatek)
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id) 
         {
-            if (id != wydatek.Id)
-                return BadRequest();
-
-            if (ModelState.IsValid)
-            {
-                await _wydatekService.ModyfikujWydatek(id, wydatek);
-                return RedirectToAction(nameof(Index));
-            }
-            return View(wydatek); // lub strona edycji z b��dami
+            var wydatek = await _wydatekService.ZnajdzWydatek(id);
+            return View(wydatek);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Wydatek wydatek)
+        {
+            await _wydatekService.ModyfikujWydatek(wydatek);
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> Delete(int id)
         {
             await _wydatekService.UsunWydatek(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
 
         public IActionResult Authors()
