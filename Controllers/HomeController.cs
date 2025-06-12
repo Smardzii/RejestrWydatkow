@@ -32,6 +32,8 @@ namespace RejestrWydatkow.Controllers
                 "Kwota_Desc" => wydatki.OrderByDescending(w => w.Kwota).ToList(),
                 "Data" => wydatki.OrderBy(w => w.Data).ToList(),
                 "Data_Desc" => wydatki.OrderByDescending(w => w.Data).ToList(),
+                "Kategoria" => wydatki.OrderBy(w => w.Kategoria).ToList(),
+                "Kategoria_Desc" => wydatki.OrderByDescending(w => w.Kategoria).ToList(),
                 "Id" => wydatki.OrderBy(w => w.Id).ToList(),
                 "Id_Desc" => wydatki.OrderByDescending(w => w.Id).ToList(),
                 _ => wydatki.OrderBy(w => w.Id).ToList()
@@ -55,6 +57,21 @@ namespace RejestrWydatkow.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(wydatek);
+        }
+
+        public async Task<IActionResult> Summary()
+        {
+            var kategorie = await _wydatekService.Podsumowanie();
+            return View(kategorie);
+        }
+
+        public async Task<IActionResult> Category(string kategoria)
+        {
+            if (kategoria == null)
+                return RedirectToAction("Index");
+            
+            var dane = await _wydatekService.Podsumowanie(kategoria);
+            return View(dane);
         }
 
         [HttpGet]

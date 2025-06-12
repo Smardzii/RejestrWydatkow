@@ -91,10 +91,13 @@
                             <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active-link" : "")" href="/">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-action="Authors" asp-controller="home">O Autorach</a>
+                            <a class="nav-link" asp-action="Authors" asp-controller="Home">O Autorach</a>
                         </li>
-                        <li>
-                            <a class="nav-link" asp-action="Add" asp-controller="home"> Dodaj Wydatek</a>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Add" asp-controller="Home"> Dodaj Wydatek</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Summary" asp-controller="Home">Podsumowanie Wydatków</a>
                         </li>
                     </ul>
                 </div>

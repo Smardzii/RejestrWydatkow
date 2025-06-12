@@ -1,4 +1,5 @@
-﻿using RejestrWydatkow.Services.Interfaces;
+﻿using System.Collections;
+using RejestrWydatkow.Services.Interfaces;
 using RejestrWydatkow.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -49,6 +50,34 @@ namespace RejestrWydatkow.Services
         public async Task<Wydatek> ZnajdzWydatek(int id)
         {
             return await _db.Wydatek.FirstAsync(w => w.Id == id);
+        }
+
+        public async Task<Hashtable> Podsumowanie()
+        {
+            var wydatki = await _db.Wydatek.ToListAsync();
+            Hashtable kategorie = new Hashtable();
+
+            foreach (var wydatek in wydatki)
+            {
+                double kwota = wydatek.Kwota;
+                if (kategorie.Contains(wydatek.Kategoria))
+                    kwota += (double) kategorie[wydatek.Kategoria];
+                kategorie[wydatek.Kategoria] = wydatek.Kwota;
+            }
+
+            return kategorie;
+        }
+
+        public async Task<KeyValuePair<double, List<Wydatek>>> Podsumowanie(string kategoria)
+        {
+            double kwota = 0;
+            var wydatki = await ListaWydatkow();
+            wydatki = wydatki.Where(w => w.Kategoria == kategoria).ToList();
+            
+            foreach (var wydatek in wydatki)
+                kwota += wydatek.Kwota;
+            
+            return KeyValuePair.Create(kwota, wydatki);
         }
     }
 }

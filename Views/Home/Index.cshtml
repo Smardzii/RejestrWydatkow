@@ -26,17 +26,22 @@
             <tr>
                 <th>
                     <a href="?sortOrder=@NextSort("Id")" class="text-light text-decoration-none">
-                        ID @GetArrow("Id")
+                        Id @GetArrow("Id")
                     </a>
                 </th>
-                <th>
+                <th class="col-5">
                     <a href="?sortOrder=@NextSort("Opis")" class="text-light text-decoration-none">
                         Opis 🧾 @GetArrow("Opis")
                     </a>
                 </th>
                 <th>
+                    <a href="?sortOrder=@NextSort("Kategoria")" class="text-light text-decoration-none">
+                        Kategoria 🗂️ @GetArrow("Kategoria")
+                    </a>
+                </th>
+                <th>
                     <a href="?sortOrder=@NextSort("Data")" class="text-light text-decoration-none">
-                        Data @GetArrow("Data")
+                        Data 📅 @GetArrow("Data")
                     </a>
                 </th>
                 <th>
@@ -53,11 +58,16 @@
                 <tr>
                     <td>@wydatek.Id</td>
                     <td>@wydatek.Opis</td>
+                    <td>
+                        <a asp-action="Category" asp-route-kategoria="@wydatek.Kategoria" class="btn text-white">
+                            @wydatek.Kategoria
+                        </a>
+                    </td>
                     <td>@wydatek.Data.ToString("dd.MM.yyyy")</td>
                     <td>@wydatek.Kwota.ToString("C")</td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@wydatek.Id">✏️</a>
-                        <a asp-action="Delete" asp-route-id="@wydatek.Id">🗑️</a>
+                        <a asp-action="Edit" asp-route-id="@wydatek.Id" class="btn">✏️</a>
+                        <a asp-action="Delete" asp-route-id="@wydatek.Id" class="btn">🗑️</a>
                     </td>
                 </tr>
             }
